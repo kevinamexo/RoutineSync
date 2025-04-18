@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import routineReducer  from '../features/routines/routineSlice'
+import routineReducer  from "./features/routines/routineSlice"
 
 export const store = configureStore({
     reducer:{

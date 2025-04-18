@@ -32,5 +32,5 @@ const routineSlice= createSlice({
 
 
 
+export default routineSlice.reducer;
 export const {addRoutine, toggleRoutine}= routineSlice.actions
-export default routineSlice;
