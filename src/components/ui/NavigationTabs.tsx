@@ -12,6 +12,9 @@ const NavigationTabs: React.FC = () => {
         <TabsTrigger asChild value="grid">
           <NavLink to="/grid">Weekly Grid</NavLink>
         </TabsTrigger>
+        <TabsTrigger asChild value="Insights">
+          <NavLink to="/insights">Weekly Grid</NavLink>
+        </TabsTrigger>
       </TabsList>
     </Tabs>
   );
