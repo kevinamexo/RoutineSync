@@ -13,7 +13,7 @@ function App() {
   const { routines } = useAppSelector((state) => state.routines);
 
   return (
-    <div className="">
+    <div className="container mx-auto max-w-5xl">
       <Header />
       <NavigationTabs />
       <Routes>

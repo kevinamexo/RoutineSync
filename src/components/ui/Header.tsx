@@ -3,8 +3,8 @@ import { Button } from "./button";
 
 const Header = () => {
   return (
-    <header className="container py-2">
-      <div className="mx-auto max-w-5xl px-4 py-3 flex items-center justify-between">
+    <header className="py-2">
+      <div className="mx-auto max-w-5xl py-3 flex items-center justify-between">
         <div className="">
           <h1 className="text-3xl font-bold tracking-tight bg-gradient-to-r from-primary via-violet-500 to-primary bg-clip-text text-transparent">
             RoutineSync
