@@ -1,8 +1,12 @@
+import { Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
-import { Button } from "./components/ui/button";
+// import { Button } from "./components/ui/button";
 import Header from "./components/ui/Header";
-import RoutineFormDialog from "./components/ui/RoutineFormDialog";
+// import RoutineFormDialog from "./components/ui/RoutineFormDialog";
 import { useAppSelector } from "./hooks/reduxHooks";
+import Grid from "./routes/Grid";
+import Insights from "./routes/Insights";
+import Routines from "./routes/Routines";
 
 function App() {
   const { routines } = useAppSelector((state) => state.routines);
@@ -10,19 +14,13 @@ function App() {
   return (
     <div className="">
       <Header />
-      <main className="container mx-auto max-w-5xl">
-        <Button>RoutineSync</Button>
-        <RoutineFormDialog />
-        {routines &&
-          routines.map((routine) => (
-            <div key={routine.id} className="flex flex-col gap-2">
-              <h2>{routine.name}</h2>
-              <p>{routine.description}</p>
-              <p>{routine.colour}</p>
-              <p>{routine.days.join(", ")}</p>
-            </div>
-          ))}
-      </main>
+      <Routes>
+        <Route path="/" element={<Navigate to="/routines" replace />} />
+        <Route path="/routines" element={<Routines />} />
+        <Route path="/grid" element={<Grid />} />
+        <Route path="/insights" element={<Insights />} />
+      </Routes>
+      {routines.length > 0 && <p>{routines.length}</p>}
     </div>
   );
 }
