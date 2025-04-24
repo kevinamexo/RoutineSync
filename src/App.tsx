@@ -7,6 +7,7 @@ import { useAppSelector } from "./hooks/reduxHooks";
 import Grid from "./routes/Grid";
 import Insights from "./routes/Insights";
 import Routines from "./routes/Routines";
+import NavigationTabs from "./components/ui/NavigationTabs";
 
 function App() {
   const { routines } = useAppSelector((state) => state.routines);
@@ -14,6 +15,7 @@ function App() {
   return (
     <div className="">
       <Header />
+      <NavigationTabs />
       <Routes>
         <Route path="/" element={<Navigate to="/routines" replace />} />
         <Route path="/routines" element={<Routines />} />
